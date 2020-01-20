@@ -435,11 +435,11 @@ ovb_contour_plot.numeric = function(estimate,
 
 
   if (is.null(xlab)) {
-    xlab <- expression(paste("Partial ", R^2, " of confounder(s) with the treatment"))
+    xlab <- expression(paste("Partial ", R^2, " with Treatment"))
   }
 
   if (is.null(ylab)) {
-    ylab <- expression(paste("Partial ", R^2, " of confounder(s) with the outcome"))
+    ylab <- expression(paste("Partial ", R^2, " with Outcome"))
   }
 
   contour(
@@ -449,6 +449,7 @@ ovb_contour_plot.numeric = function(estimate,
     cex.main = 1,
     cex.lab = 1,
     cex.axis = 1,
+    bty = "n",
     col = line_color, lty = line_type, lwd = line_width,
     ...)
   contour(grid_values, grid_values,
